@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+
+.ImageContainer {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 80px;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body{
+    margin:0;
+    padding:0;
+  }
+
+  main{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+    header{
+        background-color: dodgerblue;
+        color:white;
+        width:100%;
+        padding:20px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        font-size: 40px;
+    }
+
+    #containerEvents{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .googleMap {
+        flex: 1;
+        background-color: #b9c6ae;
+        padding: 80px;
+        text-align: center;
+      }
+
+      .Events {
+        flex: 4;
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-style: dotted;
+      }
+
+
+      footer {
+        padding: 20px;
+        text-align: center;
+        background:dodgerblue;
+        color: #fff;
+      }
+   
+      .event-info{
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 10px;
+        padding:10px;
+        margin:8px;
+        font-size:17px;
+        font-family:'Lucida Sans Unicode', 'Lucida Sans', Arial, sans-serif;
+        flex:0 0 300px;
+      }
+
+      .event-image img{
+        width:250px;
+        height:200px;
+        object-fit: cover;
+        overflow: hidden;
+      }
+  
+      .searchContainer input[type=text]{
+        font-size: 20px;
+        padding:6px;
+      }
+     
+      .searchContainer button{
+        padding:6px;
+        font-size: 20px;
+        cursor: pointer;
+
+      }
+
+
+@media screen and (max-width: 768px) {
+  .centered{
+    width:150px;
+    font-size: 60%;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .centered{
+    width:100px;
+    font-size: 50%;
+  }
+}
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}     

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamically Generated Elements</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+        <header>
+            <!--Logo Image Slogan and Search-->
+            <aside>
+            <img src="./Assets/Images/Screenshot 2022-11-03 at 19.11.35.jpg" width="300px" height="150px" alt="Logo"></aside>
+            <h2 class="slogan">Some Slogans</h2>
+            <div class="searchContainer">
+            <input type="text" class="searchbox" id="locationsearch"   placeholder="Location">
+            <button type="submit" id="search-btn" class="btn">Search</button>
+            </div>
+    
+        </header>
+        <!---Container for Images Events and Google Map -->
+        <div class="container" >
+            <div class="ImageContainer">
+            <img src="./assets/images/download.jpeg" alt="EventImage" style="width:100%">
+            <div class="centered">Whats On Where</div>
+            </div>
+            <div class="containerEvents">
+                <div class="Events" id="currentEvents">Events</div>
+                <aside class="googleMap">Google Maps</aside>
+            </div>
+        </div>
+        
+
+        <div class="recent-search" id="recent-locations">
+          <h3>Recent Locations</h3>
+
+        </div>
+
+        <h3>My Google Maps Demo</h3>
+        <!--The div element for the map -->
+        <div id="map"></div> 
+       
+    </main>
+     
+    <footer>
+        <h3>About Us</h3>
+        <h3>Contact Us</h3>
+    </footer>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr-Av0kS8QAYgzV2dOHJXomDn8rxTcsRA&callback=initMap&v=weekly"
+      defer
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="/assets/js/script.js"></script> 
+
+  </body>
