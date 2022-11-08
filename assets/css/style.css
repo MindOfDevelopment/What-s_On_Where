@@ -31,17 +31,19 @@
         width:100%;
         padding:20px;
         display: flex;
-        justify-content:center;
+        justify-content:space-between;
         align-items: center;
-        font-size: 40px;
+        font-size: 40px;;
     }
 
-    #containerEvents{
+    .containerEvents{
         display: flex;
         flex-wrap: wrap;
     }
 
-    .googleMap {
+
+
+  .asideRecent {
         flex: 1;
         background-color: #b9c6ae;
         padding: 80px;
