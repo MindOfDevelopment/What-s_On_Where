@@ -14,7 +14,7 @@
             <img src="./Assets/Images/Screenshot 2022-11-03 at 19.11.35.jpg" width="300px" height="150px" alt="Logo"></aside>
             <h2 class="slogan">Some Slogans</h2>
             <div class="searchContainer">
-            <input type="text" class="searchbox" id="locationsearch"   placeholder="Location">
+            <input type="text" class="searchbox" id="locationsearch" onkeyup="this.value = this.value.toUpperCase()" placeholder="Location">
             <button type="submit" id="search-btn" class="btn">Search</button>
             </div>
     
@@ -26,17 +26,23 @@
             <div class="centered">Whats On Where</div>
             </div>
             <div class="containerEvents">
-                <div class="Events" id="currentEvents">Events</div>
-                <aside class="googleMap">Google Maps</aside>
+                <div class="eventTitle">
+                  <h2>Events</h2>
+                  <div class ="Events" id="currentEvents"></div>                  
+                  
+                </div>
+                <aside class="asideRecent">
+                  <h3>Recent Locations</h3>
+                  <div class="recent-search" id="recent-locations"> </div>
+                 
+                 
+                  </aside>
+                  
             </div>
         </div>
         
 
-        <div class="recent-search" id="recent-locations">
-          <h3>Recent Locations</h3>
-
-        </div>
-
+        
         <h3>My Google Maps Demo</h3>
         <!--The div element for the map -->
         <div id="map"></div> 
