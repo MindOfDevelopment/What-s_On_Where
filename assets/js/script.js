@@ -4,13 +4,24 @@ const maxEvents = 5;
 
 const searchLocation = document.getElementById('locationsearch')
 const searchBtn = document.getElementById('search-btn');
+const heroIMG = document.querySelector('.ImageContainer')
 
 let searchHistory = [];
 const features = [];
 console.log(features);
 
-function getLocation() {
+init ();
+
+function init () {
+    heroIMG.style.display = 'block';
+}
+
+function getLocation(event) {
+
+    event.preventDefault();
     var city = searchLocation.value;
+
+    
 
     if (city == '') {
         window.alert("Must enter a city to search");
@@ -25,6 +36,8 @@ function getLocation() {
 }
 
 function getEventData(city) {
+
+    heroIMG.style.display = 'none';
 
     var ApiKey = "4db81rdb04josQtHYUOrwdd1xDS604iA";
 
