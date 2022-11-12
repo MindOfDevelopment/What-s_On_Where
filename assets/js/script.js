@@ -1,3 +1,4 @@
+//setting all the main consts first
 const ApiKey = "4db81rdb04josQtHYUOrwdd1xDS604iA";
 const eventFinderBaseUrl = "https://app.ticketmaster.com/discovery/v2/"
 const maxEvents = 5;
@@ -5,27 +6,37 @@ const maxEvents = 5;
 const searchLocation = document.getElementById('locationsearch')
 const searchBtn = document.getElementById('search-btn');
 const heroIMG = document.querySelector('.ImageContainer')
+const eventArea = document.querySelector('.eventTitle')
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
 
+//creating an array to push the search history list of cities and towns into
 let searchHistory = [];
-const features = [];
-console.log(features);
 
+// calling the init function
 init ();
 
+// using init to dictate the initial style for the page
 function init () {
     heroIMG.style.display = 'block';
+    eventArea.style.display = 'none';
 }
 
+// this function is called from the event listener on the searchbtn, and takes the value typed into the search bar to check whether this city/town has been searched before
 function getLocation(event) {
 
     event.preventDefault();
     var city = searchLocation.value;
 
     
-
+// if the no city is typed into the search bar then a modal will pop up to warn the user that they need to enter a city to search
     if (city == '') {
-        window.alert("Must enter a city to search");
-        return;
+        modal.style.display = "block";
+        span.onclick = function() {
+            modal.style.display = "none";
+          }
+          return;
+
     } else if (!searchHistory.includes(city)) {
         searchHistory.push(city);
         localStorage.setItem("search-history", JSON.stringify(searchHistory));
@@ -38,6 +49,8 @@ function getLocation(event) {
 function getEventData(city) {
 
     heroIMG.style.display = 'none';
+    eventArea.style.display = 'block';
+
 
     var ApiKey = "4db81rdb04josQtHYUOrwdd1xDS604iA";
 
@@ -64,20 +77,20 @@ function renderEventData(eventData) {
 
     const markers = [];
     console.log(markers);
-    const defaultLatLong = { lat: 51.4934, lng: 0.0098 };
+    
 
     for (let i = 0; i < maxEvents; i++) {
 
         const dailyEvents = eventInfo[i];
         const eventImage = `${dailyEvents.images[0].url}`;
 
-        const eventName = "Event: " + `${dailyEvents.name}`;
+        const eventName = "<b>Event:</b> " + `${dailyEvents.name}`;
 
-        const eventVenue = "Venue: " + `${dailyEvents._embedded.venues[0].name}`;
+        const eventVenue = "<b>Venue:</b> " + `${dailyEvents._embedded.venues[0].name}`;
 
-        const eventDate = "Date: " + new Date("2022-11-06T19:00:00Z").toDateString();
-        const eventTime = "Start time: " + `${dailyEvents.dates.start.localTime}`
-        const eventPostcode = "Postcode: " + `${dailyEvents._embedded.venues[0].postalCode}`;
+        const eventDate = "<b>Date:</b> " + new Date(`${dailyEvents.dates.start.localDate}`).toDateString();
+        const eventTime = "<b>Start time:</b> " + `${dailyEvents.dates.start.localTime}`
+        const eventPostcode = "<b>Postcode:</b> " + `${dailyEvents._embedded.venues[0].postalCode}`;
         const eventURL = `${dailyEvents.url}`
 
         // location data
@@ -156,7 +169,7 @@ function getSearchHistory() {
         renderSearchedLocations();
     } else {
         console.log("no recent searches");
-        document.getElementById("recent-locations").textContent = " No recent searches "
+        document.getElementById("recent-locations").textContent = " No recently searched locations"
     };
 
 };
