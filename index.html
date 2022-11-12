@@ -3,71 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,200&display=swap" -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <!----rel="stylesheet">-->
     <title>Whats On Where</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <header>
+
+      <div class="searchContainer">
+        <input type="text" class="searchbox" id="locationsearch" onkeyup="this.value = this.value.toUpperCase()" placeholder="Location">
+        <button type="submit" id="search-btn" class="btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="model-text"><i class="fa-duotone fa-exclamation"></i> : You must enter a location to search.</p>
+        </div>
+      </div>
+        <!--Logo Image Slogan and Search-->
+       <div id="logo-style">
+        <img src="./assets/images/WOW-logo.png" alt="Logo">
+        <h2 class="slogan">What's On Where</h2>
+       </div>
+
+       <div id="socials">
+        <img src="./assets/images/socials /PNG-FB/f_logo_RGB-White_144.png" alt="facebook logo">
+        <img src="./assets/images/socials /glyph-logo_May2016.png" alt="instgram logo">
+        <img src="./assets/images/socials /2021 Twitter logo - white.png" alt="twitter-logo">
+       </div>
+       
+       
+
+    </header>
     <main>
-        <header>
-            <!--Logo Image Slogan and Search-->
-            <aside>
-            <img src="./Assets/Images/Screenshot 2022-11-03 at 19.11.35.jpg" width="300px" height="150px" alt="Logo"></aside>
-            <h2 class="slogan">Extraordinary Events Delivered</h2>
-            <div class="searchContainer">
-            <input type="text" class="searchbox" id="locationsearch" onkeyup="this.value = this.value.toUpperCase()" placeholder="Location">
-            <button type="submit" id="search-btn" class="btn">Search</button>
-            </div>
-    
-        </header>
         <!---Container for Images Events and Google Map -->
-        <div class="container" >
-            <div class="ImageContainer">
-              <img src="./assets/images/download.jpeg" alt="EventImage" style="width:100%">
-              <div class="centered">Whats On Where</div>
-            </div>
-           
-              <div class="containerEvents">
-                <div class="eventTitle">
-                  <h2>Events</h2>
-                  <div class ="Events" id="currentEvents">
-                  </div>  
-                </div>
-              
-                <aside class="asideRecent">
-                  <h3>Recent Locations</h3>
-                  <div class="recent-search" id="recent-locations"> </div>
-                  
-                  
-                </aside>
+      <div class="container" >
+          <div class="ImageContainer">
+            <img src="./assets/images/download.jpeg" alt="EventImage" style="width:100%">
+          </div>
+          <h2>Events</h2>
+            <div class="containerEvents">
+              <aside class="asideRecent">
+                <h3>Location History</h3>
+                <div class="recent-search" id="recent-locations"> </div>
+              </aside>
+              <div class="eventTitle">
+                
+                <div class ="Events" id="currentEvents">
+                </div>  
               </div>
           
-        </div>
+            </div>
         
-
-        
+      </div>
         
         <!--The div element for the map -->
-        <div id="map"></div> 
+      <div id="map"></div> 
 
       <div class="aboutus">
-        <h3>About Us</h3>
-        <p>We believe that everyone deserves to experience a unique and memorable event no matter where they are in the world.
-          With an online application linked to one of the worlds best ticket sales platforms, we can guide locals and visitors to the hottest events in their area, quickly and efficiently.</p>
+        <aside>
+            <h3>About Us</h3>
+        </aside>
+        <div>
+          <p>We believe that everyone deserves to experience a unique and memorable event no matter where they are in the world.
+            With an online application linked to one of the worlds best ticket sales platforms, we can guide locals and visitors to the hottest events in their area, quickly and efficiently.</p>
+        </div>
       </div>
        
     </main>
      
     <footer>
+      <h3><b>Contact Us</b></h3>
+      <div class="contact">
+        <img id="company-name" src="./assets/images/AEG.png" alt="company name">
+        <a href="info@AngularEventsGroup.com"><i class="fa-solid fa-envelope">&nbsp;:&nbsp; </i>info@AngularEventsGroup.com</a>
         
-        <h3>Contact Us</h3>
-    </footer>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr-Av0kS8QAYgzV2dOHJXomDn8rxTcsRA&callback=initMap&v=weekly"
-      defer
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="/assets/js/script.js"></script> 
+        <div id="address">
+          <p>Unit 2 - Roundabout Road Park</p>
+          <p>Event Way</p>
+          <p>Fairground City</p>
+          <p>AE12 3GL</p>
+        </div>
 
+      </div>
+
+    </footer>
   </body>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr-Av0kS8QAYgzV2dOHJXomDn8rxTcsRA&callback=initMap&v=weekly" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="/assets/js/script.js"></script> 
+
+</html>
