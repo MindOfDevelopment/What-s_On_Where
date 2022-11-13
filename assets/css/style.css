@@ -197,13 +197,14 @@ main{
 
 #recent-locations div {
   padding: 10px;
+  cursor: pointer;
 }
 
 
 .Events {
   flex: 4;/*flex grow of 4*/
   display: flex;
-  width:auto;
+  width: auto;
   flex-wrap: wrap;
   justify-content: center;
 }
