@@ -50,11 +50,16 @@ We have also tried to use correct semantic structure within the HTML and CSS fil
 
 ## Link to deployed application.
 
-<a href=“https://enigmawoman.github.io/06-Server-Side-APIs/”>Deployed Online Event Search Website</a>
+<a href=“https://mindofdevelopment.github.io/Whats-On-Where/”>Deployed Online Event Search Website</a>
+
+## Link to presentation.
+
+<a href=“https://docs.google.com/presentation/d/1HpZKYHx2DW8OB4BSY6H0Ioe9ZcmjMlnUBIGtdh7KjF4/edit?usp=sharing”>Event Search Website Presentation</a>
 
 ## Screenshot of the finished website
 
-![Event Search Website](./assets/images/Weather-dashboard.png)
+![Event Search initial Website](./assets/images/Init%20load%20page.html.png)
+![Event Search Website](./assets/images/search%20page.png)
 
 ## License
 
