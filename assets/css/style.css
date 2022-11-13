@@ -20,6 +20,8 @@ body {
   background-color: var(--light);
 }
 
+/*header to have width of the screen and flex property*/
+
 header{
   background-color: var(--dark);
   width: 100%;
@@ -27,11 +29,11 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 40px;;
+  font-size: 40px;
 }
 
 header img {
-  width: 400px;
+  width: 400px;/*width to be 400px*/
   margin-bottom: 10px;
 }
 
@@ -60,6 +62,7 @@ header img {
   display: flex;
 }
  
+/*input field*/
 .searchContainer input{
   font-size: 15px;
   padding:6px;
@@ -67,6 +70,7 @@ header img {
   border-color: var(--dark);
 }
 
+/*search button */
 .searchContainer button{
   padding:6px;
   font-size: 20px;
@@ -127,6 +131,7 @@ main{
   margin: 10px;
 }
 
+/*Event header*/
 .container h2 {
   text-align: center;
   font-family: 'Nunito', sans-serif;
@@ -135,6 +140,7 @@ main{
   padding: 20px;
 }
 
+/*Container for image*/
 .ImageContainer {
   position: relative;
   text-align: center;
@@ -150,13 +156,13 @@ main{
   margin-left:20px;
   margin-right:20px
 }
-
+/*Events and location history container*/
 .containerEvents {
   
   margin-left: 20px ;
   margin-right: 20px;
   display: flex;
-  justify-content:space-between;
+  justify-content:space-between;/* evenly distributes space between elements*/
 }
 
 .eventTitle {
@@ -171,11 +177,11 @@ main{
 
 
 .asideRecent {
-  flex: 1;
+  flex: 1;/*flex grow of 1*/
   background-color: var(--darkgrey);
   padding: 30px;
   text-align: center;
-  height: auto;
+  height: auto;/*height fits the conatiner*/
   margin: 10px;
   border-radius: 10px;
   color: var(--white)
@@ -193,8 +199,9 @@ main{
   padding: 10px;
 }
 
+
 .Events {
-  flex: 4;
+  flex: 4;/*flex grow of 4*/
   display: flex;
   width:auto;
   flex-wrap: wrap;
@@ -209,10 +216,11 @@ footer {
   color: #fff;
 }
 
+
 .aboutus {
   /* background-color: var(--mid-2); */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-evenly;/*spaces elements evenly in container*/
   align-items: center;
   margin: 20px;
   color: var(--dark);
@@ -250,12 +258,13 @@ footer {
   flex:0 0 300px;
 }
 
+/*Make the event images uniform*/
 .event-image img{
   margin: auto;
   margin-bottom: 20px;
   width:250px;
   height:200px;
-  object-fit: cover;
+  object-fit: cover;/*images to fit the given dimension keeping aspect ratio*/
   overflow: hidden;
   
 }
@@ -292,6 +301,7 @@ footer {
   cursor: pointer;
 }
 
+/*Heading of the footer*/
 footer h3 {
   margin: 15px;
   padding-bottom: 20px;
@@ -307,22 +317,24 @@ footer h3 {
 #address {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-end;/*align items in container to end */
   color: var(--light);
 }
 
+/*When the screen width is 768px or smaller*/
 @media screen and (max-width: 768px) {
   .centered{
     width:100px;
     font-size: 50%;
   }
+
   header{
     background-color: var(--dark);
     width: 100%;
     padding: 20px;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
+    flex-direction: column-reverse;/*palces items in reverse column order*/
+    justify-content: space-between;/*distributes space between the elements*/
     align-items: center;
     font-size: 40px;;
   }
@@ -364,7 +376,6 @@ footer h3 {
   background-color: #b9c6ae;
   padding: 80px;
   text-align: center;
-  
   height: auto;
   }
   .event-image img{
@@ -378,7 +389,7 @@ footer h3 {
 }
     
 
-
+/*When the screen width is 576px or smaller */
 
 @media (max-width: 576px) {
   .centered{

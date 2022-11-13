@@ -12,40 +12,42 @@
     <title>Whats On Where</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
+  
+  
   <body>
     <header>
-
+      <!---Container for input and search button-->
       <div class="searchContainer">
         <input type="text" class="searchbox" id="locationsearch" onkeyup="this.value = this.value.toUpperCase()" placeholder="Location">
         <button type="submit" id="search-btn" class="btn">
           <i class="fas fa-search"></i>
         </button>
       </div>
-      <div id="myModal" class="modal">
 
-        <!-- Modal content -->
-        <div class="modal-content">
+      <div id="myModal" class="modal">
+      <!-- Modal content --> 
+       <div class="modal-content">
           <span class="close">&times;</span>
           <p id="model-text"><i class="fa-duotone fa-exclamation"></i> : You must enter a location to search.</p>
         </div>
       </div>
-        <!--Logo Image Slogan and Search-->
+
+        <!--Logo Image  and Slogan-->
        <div id="logo-style">
         <img src="./assets/images/WOW-logo.png" alt="Logo">
         <h2 class="slogan">What's On Where</h2>
        </div>
-
+       <!--Social media icons-->
        <div id="socials">
         <img src="./assets/images/socials /PNG-FB/f_logo_RGB-White_144.png" alt="facebook logo">
         <img src="./assets/images/socials /glyph-logo_May2016.png" alt="instgram logo">
         <img src="./assets/images/socials /2021 Twitter logo - white.png" alt="twitter-logo">
        </div>
        
-       
+        </header>
 
-    </header>
     <main>
-        <!---Container for Images Events and Google Map -->
+        <!---Container for Images Events and Location search history-->
       <div class="container" >
           <div class="ImageContainer">
             <img src="./assets/images/download.jpeg" alt="EventImage" style="width:100%">
@@ -57,17 +59,16 @@
                 <div class="recent-search" id="recent-locations"> </div>
               </aside>
               <div class="eventTitle">
-                
                 <div class ="Events" id="currentEvents">
                 </div>  
               </div>
-          
-            </div>
-        
-      </div>
+          </div>
+        </div>
         
         <!--The div element for the map -->
       <div id="map"></div> 
+      
+      <!--About us section---->
 
       <div class="aboutus">
         <aside>
@@ -82,6 +83,7 @@
     </main>
      
     <footer>
+      <!---Conatct us section-->
       <h3><b>Contact Us</b></h3>
       <div class="contact">
         <img id="company-name" src="./assets/images/AEG.png" alt="company name">
@@ -93,10 +95,10 @@
           <p>Fairground City</p>
           <p>AE12 3GL</p>
         </div>
-
       </div>
 
     </footer>
+
   </body>
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr-Av0kS8QAYgzV2dOHJXomDn8rxTcsRA&callback=initMap&v=weekly" defer></script>
