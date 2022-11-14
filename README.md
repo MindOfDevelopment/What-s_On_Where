@@ -6,8 +6,6 @@ This project builds Ticketmaster website application, using Ticketmaster API, wh
 for events at locations of their choice.
 The locations, using Google Maps API, will also be presented on Google Maps.
 
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--==-=-=-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-=-=-
-
 ## User story
 
 AS A traveller or resident of a town
@@ -16,7 +14,7 @@ I WANT to search to see the latest events in my location or location I am travel
 
 SO THAT I can attend events and have fun.
 
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--==--==--=--=-=-=-=-=-=-=-=-=-
+
 
 ## Acceptance criteria
 
@@ -32,7 +30,7 @@ WHEN clicking on any city name
 
 THEN I want to be presented with location information of events in that area on Google Map.
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 
 The main challenge we faced, was getting used to using the fetch command and interpreting the returned
 data from the API.
@@ -50,11 +48,12 @@ We have also tried to use correct semantic structure within the HTML and CSS fil
 
 ## Link to deployed application.
 
-<a href=“https://mindofdevelopment.github.io/Whats-On-Where/”>Deployed Online Event Search Website</a>
+<a href="https://mindofdevelopment.github.io/Whats-On-Where/">Deployed Online Event Search Website</a>
 
 ## Link to presentation.
 
-<a href=“https://docs.google.com/presentation/d/1HpZKYHx2DW8OB4BSY6H0Ioe9ZcmjMlnUBIGtdh7KjF4/edit?usp=sharing”>Event Search Website Presentation</a>
+<a href="https://docs.google.com/presentation/d/1HpZKYHx2DW8OB4BSY6H0Ioe9ZcmjMlnUBIGtdh7KjF4/edit?usp=sharing">What's On Where Presentation</a>
+
 
 ## Screenshot of the finished website
 
@@ -65,4 +64,4 @@ We have also tried to use correct semantic structure within the HTML and CSS fil
 
 NA
 
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
